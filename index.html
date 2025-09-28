@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-800 text-gray-400 flex flex-row">
+
+<div id="spaceleft" class="xl:w-20 bg-transparent"></div>
+<div id="barleft" class="fixed md:left-0 xl:left-20 top-0 flex-shrink-0 md:w-8 lg:w-12 h-screen md:border-x border-gray-600 bg-[image:repeating-linear-gradient(315deg,#4b5563_0,#4b4463_1px,transparent_0,transparent_50%)] bg-[size:20px_20px] bg-fixed"></div>
+
+<div id="content" class="flex-grow my-2 px-5 md:px-10 lg:px-15 xl:px-30">
+    <header>
+    <nav class="px-2 fixed top-0 left-0 w-full z-50">
+        <div class="bg-gray-700 hidden md:flex justify-center space-x-4">
+            <a href="#skills" class="px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 rounded-md">Compétences</a>
+            <a href="#experiencies" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Expériences</a>
+            <a href="#others" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Autres</a>
+            <a href="#contact" class="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Contact</a>
+        </div>
+
+        <div class="bg-black flex md:hidden justify-end">
+            <button id="menu-btn" class="p-2 rounded-md text-white hover:bg-white/5">
+            <img src="menu.svg" alt="Menu" class="w-6 h-6">
+            </button>
+        </div>
+
+        <div id="menu" class="hidden absolute top-10 right-2 w-48 bg-gray-800/80 rounded-md shadow-lg flex flex-col space-y-2 p-2 z-50">
+            <a href="#skills" class="block px-3 py-2 text-sm font-normal text-gray-300 hover:bg-white/5 rounded-md">Compétences</a>
+            <a href="#experiencies" class="block px-3 py-2 text-sm font-normal text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Expériences</a>
+            <a href="#others" class="block px-3 py-2 text-sm font-normal text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Autres</a>
+            <a href="#contact" class="block px-3 py-2 text-sm font-normal text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Contact</a>
+        </div>
+    </nav>
+    <script>
+        const button = document.getElementById("menu-btn");
+        const menu = document.getElementById("menu");
+
+        button.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+    <div class="my-10 p-5">
+        <section class="mb-5 md:mb-10 xl:mb-20 my-10 flex flex-col md:flex-row items-center md:items-start gap-6">
+            <div class="flex-1 text-center md:text-left">
+                <span class="box-decoration-clone md:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 px-3 py-1 text-white text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-bold leading-tight">
+                    Resume<br>Ange-Marie Roland
+                </span>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <img class="object-contain w-48 sm:w-64 md:w-72 xl:w-96" src="ghost-cod-call-of-duty.gif">
+            </div>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-2 mb-1 p-5 bg-gray-950 rounded-sm border-4 border-double border-gray-600">
+            <div class="my-2">
+                <h5 class="text-sm md:text-base lg:text-xl font-bold tracking-tight underline decoration-sky-500">Recherche stage alterné - “poste”</h5>
+            </div>
+            <div>
+                <p class="text-sm md:text-base lg:text-xl leading-relaxed tracking-tight">
+                    Après une première expérience dans le développement web et mobile, 
+                    je recherche un stage alterné (2 semaines école / 6 semaines entreprise) à
+                    compter de janvier 2026. Étudiant en pré-Master à <abbr title="Ecole pour l'Informatique et les nouvelles Technologies">EPITECH</abbr> Rennes, je développe 
+                    mes compétences en programmation et en algorithmique à travers une pédagogie 
+                    basée sur les projets. Je souhaite consolider mes acquis et contribuer activement 
+                    à des projets concrets en entreprise.
+                </p>
+            </div>
+        </section>
+    </div>
+    </header>
+
+    <main>
+    <div>
+    <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+        <h4 id="skills" class="text-sm md:text-base font-bold text-blue-600">Compétences</h4>
+    <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+    <section class="mt-5 mb-20">
+        <table class="bg-gray-950 text-sm md:text-base lg:text-xl table-auto border-separate border border-gray-400 w-full md:max-w-[1000px] text-left mx-auto">
+            <tbody>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-600 border-l-4 lg:border-l-8 border-l-purple-900">
+                        <h4 class="font-semibold">Programmation</h4>
+                        Python, développement web (<abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, TailwindCSS, Javascript) et Java
+                    </td>
+                    <td class="px-4 py-2 border border-gray-600 border-l-4 lg:border-l-8 border-l-blue-800">
+                        <h4 class="font-semibold">Bases solides</h4>
+                        Algorithmique, structures de données, optimisation
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2 border border-gray-600 border-l-4 lg:border-l-8 border-l-purple-900">
+                        <h4 class="font-semibold">Expériences passées</h4>
+                        Flutter, Node.js, Firebase, MongoDB, Figma
+                    </td>
+                    <td class="px-4 py-2 border border-gray-600 border-l-4 lg:border-l-8 border-l-blue-800">
+                        <h4 class="font-semibold">Outils & méthodes</h4>
+                        Git, Linux, travail en équipe, pédagogie par projets
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    </div>
+
+    <div>
+    <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+        <h4 id="experiencies" class="text-sm md:text-base font-bold text-blue-600 text-right">Expériences</h4>
+    <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+        <div class="mb-20 grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-2 mt-5 text-sm md:text-base lg:text-xl md:max-w-[1100px] w-full md:mx-auto">
+        <section class="bg-gray-950 text-gray-400 md:hover:text-gray-200 rounded-xl shadow-lg p-6 mx-auto md:max-w-[500px] md:transition md:duration-700 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl">
+            <div class="mb-4">
+                <ul class="list-none list-inside space-y-2">
+                    <li>Conception d’une application mobile pour l’achat et la vente d’articles de seconde main.</li>
+                    <li>Mise en place d’une solution de paiement sécurisée et amélioration de la scalabilité.</li>
+                    <li>Contribution à la maintenance de l’application TOSSIN, outil de consultation des droits juridiques.</li>
+                </ul>
+            </div>
+            <hr class="h-0.5 w-full border-0 bg-neutral-700 mb-4">
+            <div>
+                <h4 class="font-semibold text-sm md:text-base">Stagiaire à OMEGA DIGITAL SERVICES au Bénin, Juillet - Septembre 2022</h4>
+            </div>
+        </section>
+
+        <section class="bg-gray-950 text-gray-400 md:hover:text-gray-200 rounded-xl shadow-lg p-6 mx-auto md:max-w-[500px] md:transition md:duration-700 md:ease-in-out md:hover:scale-105 md:hover:shadow-2xl">
+            <div class="mb-4">
+                <ul class="list-none list-inside space-y-2">
+                    <li>Participation au développement d’une application mobile de e-commerce pour la vente de produits alimentaires.</li>
+                    <li>Contribution à la conception de maquettes et prototypes avec l’équipe design.</li>
+                    <li>Collaboration en équipe dans un environnement agile, de l’analyse au déploiement.</li>
+                </ul>
+            </div>
+            <hr class="h-0.5 w-full border-0 bg-neutral-700 mb-4">
+            <div>
+                <h4 class="font-semibold text-sm md:text-base">Stagiaire à RABTECH au Bénin, Mai - Juillet 2023</h4>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <div>
+        <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+            <h4 id="others" class="text-sm md:text-base font-bold text-blue-600">Autres</h4>
+        <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+        <div class="mb-20 mt-5 bg-gray-900 grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-sm md:text-base lg:text-xl">
+            <div class="md:col-span-1 md:row-span-3 md:hover:bg-gray-950 bg-gray-800 p-4 rounded-lg">
+                <h5 class="font-bold">Compétences transverses</h5><br>
+                <ul class="list-none list-inside space-y-2">
+                    <li>Pensée critique</li>
+                    <li>Autonomie</li>
+                    <li>Collaboration en équipe</li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 md:row-span-2 md:hover:bg-gray-950 bg-gray-800 p-4 rounded-lg">
+                <h5 class="font-bold">Loisirs</h5><br>
+                <ul class="list-none list-inside space-y-2">
+                    <li>Jeux vidéo, échecs</li>
+                    <li>Dessin, musique (créativité)</li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-2 md:row-span-1 md:hover:bg-gray-950 bg-gray-800 p-4 rounded-lg">
+                <h5 class="font-bold">Langues</h5><br>
+                <p>Anglais B2 (IELTS, 2025)</p>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer id="contact" class="bg-gray-950 md:bg-gray-800 text-white text-sm md:text-base">
+        <hr class="h-0.5 w-full border-t-0 bg-neutral-100 dark:bg-white/10">
+        <div class="p-6 w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="space-y-3">
+            <h3 class="font-bold text-blue-600">Liens utiles</h3>
+            <div>
+                <a href="https://github.com/Ange-Marie-05" class="hover:text-blue-400 transition">Github</a>
+            </div>
+            <div>
+                <a href="www.linkedin.com/in/ange-marie-dovi-036a22386" class="hover:text-blue-400 transition">LinkedIn</a>
+            </div>
+            <div>
+                <a href="CV_AMR_inacheve.pdf" download class="hover:text-blue-400 transition">Télécharger CV</a>
+            </div>
+        </section>
+
+        <section class="md:space-y-3 md:flex md:justify-end">
+        <div>
+            <h3 class="font-bold text-blue-600 mb-3">Pour me joindre</h3>
+            <form action="https://formspree.io/f/xyznkvbn" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" placeholder="Nom et prénom" class="p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                <input type="email" placeholder="Email" class="p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                <textarea name="message" id="message" rows="4" placeholder="Votre message" class="md:col-span-2 p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+                <button type="submit" class="md:col-span-2 border border-gray-600 hover:bg-blue-800 transition text-white font-semibold py-2 px-4 rounded">Envoyer</button>
+            </form>
+        </div>
+        </section>
+        </div>
+
+        <div class="text-center text-gray-400 py-15">
+            © 2025 Mon Portfolio. Tous droits réservés.
+        </div>
+    </footer>
+
+</div>
+
+<div id="barright" class="fixed md:right-0 xl:right-20 top-0flex-shrink-0 md:w-8 lg:w-12 h-screen md:border-x border-gray-600 bg-[image:repeating-linear-gradient(315deg,#4b5563_0,#4b4463_1px,transparent_0,transparent_50%)] bg-[size:20px_20px] bg-fixed"></div>
+<div id="spaceright" class="xl:w-20 bg-transparent"></div>
+</body>
+</html>
